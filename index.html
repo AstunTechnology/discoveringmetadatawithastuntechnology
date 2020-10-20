@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Discovering Metadata with Astun Technology</title>
+
+		<meta name="description" content="How to make metadata easier to create and manage, and make it more useful">
+		<meta name="author" content="Jo Cook, Astun Technology">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Discovering Metadata with Astun Technology</h2>
+					<p>
+						<small>Presented by Jo Cook,</small>
+						<small>and Eoghan Hennessy</small>
+					</p>
+				</section>
+
+				<section>
+					<p>We are <span style="font-weight:bold;color:#eee8d5">Astun Technology</span>, and we create world-class cloud-hosted geospatial solutions on open source foundations</p>
+					<p>Today we'll be talking about <span style="font-weight:bold">data discovery and metadata</span></p>
+					<aside class="notes">Original first paragraph: Astun Technology are "Experts in Place", using open source software foundations to create and deliver world-class cloud-hosted products, helping our customers deliver services efficiently through the power of geography</aside>
+				</section>
+
+				<section>
+					<p style="font-weight:bold;color:#eee8d5">Hi, I'm Jo</p>
+					<img width=200 src="./images/jo.jpg"/>
+					<p class="fragment">I'm the Data Discovery Lead at Astun Technology</p>
+				</section>
+
+				<section>
+					<p  style="font-weight:bold;color:#eee8d5">Eoghan Hennessy is co-hosting</p>
+					<img width=200 src="./images/eoghan.jpg"/>
+					<p class="fragment">He's a Project Manager at Astun with responsibility for iShare in the Cloud and Metadata Enterprise Solutions</p>
+				</section>
+
+				<section data-background-image="./images/scotgov_distorted.png" alt="scotgov" class="full" data-background-size="cover">
+					<h2 class="box">Some background</h2>
+					<p class="box">Astun Technology manage metadata catalogs for Scottish Government, the Environment Agency, DEFRA, and many regional authorities</p>
+					<p class="box">We've also created the Gemini 2.3 Plugin for GeoNetwork, and have recently completed a series of enhancements around data discoverability for Scottish Government that we are able to pass on to all of our clients</p>
+					<aside class="notes">Just a whistlestop tour/teaser- for more info contact us at the address at the end of the presentation</aside>
+				</section>
+
+
+				<!-- <section data-background="linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./images/cans.jpg)" alt="unlabelled cans"  data-background-size="cover"> -->
+				<section data-background-image="./images/cans.jpg" alt="unlabelled cans" class="full" data-background-size="cover">
+					<h2 class="box">What is metadata?</h2>
+					<span class="fragment">
+					<p class="box">Metadata is a way of describing data, giving you the information you need to ensure it's fit for purpose.</p>
+				</span>
+				<span class="fragment">
+					<p class="box">It's generally stored using a common format, in a catalog, with persistent identifiers and links back to the source data, so it can be discovered and shared easily.</p>
+				</span>
+				<small class="attribution" style="color:white">Debora Cartagena Pixnio, CC0</small>
+				</section>
+
+				<!-- <section data-background-image="./images/disappointed_2.jpg" class="full" data-background-size="cover"> -->
+				<section data-background-image="./images/olderrors.png" class="full" data-background-size="cover">
+					<span>
+					<h2 class="box" style="background-color: rgba(0, 0, 0, 0.7)">But...</h2>
+					<p class="fragment"><span class="box-left">Metadata is often viewed as a legislative box-ticking exercise that is hard, costs time and money, and seems to have little direct benefit.<span class="fragment"><small>*cough, INSPIRE, cough*</small></span></span></p>
+				</span>
+					<aside class="notes">As a result, we lost site of that primary purpose. Though TBF INSPIRE was and is a great idea and still important!</aside>
+				</section>
+
+
+				<section data-background-image="./images/puppy.jpg" class="full" data-background-size="cover">
+					<h2 class="box">Times have changed!</h2>
+					<small class="attribution" style="color:grey">The Internet</small>
+				</section>
+
+				<section>
+					<p>We've gone beyond creating data and metadata for internal use. Now, data is shared on corporate intranets, on public-facing portals, and in national data catalogs, and efficient use of data is crucial in solving many of today's crises...</p>
+					<img class="fragment" src="./images/excel.png" alt="excel" width="600"/>
+					<aside class="notes">We need to focus once more on the primary purpose of metadata- to help with the discovery of data</aside>
+				</section>
+
+				<section data-background-image="./images/geospatial_commission.png" alt="geospatialcommission" data-background-size="cover">
+					<p class="box">Astun have enhanced and expanded our metadata offering to meet these new challenges, and to help you meet emerging best practice guidelines for data management, such as those issued by Government Digital Service (GDS)</p>
+				</section>
+
+				<section>
+					<h3>Expanded product</h3>
+					<p>We use <span class="fragment sentence">GeoNetwork</span>, the leading open source geospatial metadata catalog, as the core of our product. We've now added <span class="fragment sentence">Metadata Crawler</span>, also open source, based on Talend ETL for bulk metadata creation.</p>
+					<p>We've also <span class="fragment sentence">expanded the functionality</span> of GeoNetwork, which we'll talk more about shortly</p>
+				</section>
+
+				<section data-background-image="./images/overview.png" class="full" data-background-size="contain">
+					<h2>Overview</h2>
+				</section>
+
+				<section>
+					<h3>Best Practice</h3>
+				 <p>Government Digital Services Best Practice Guides state that data should be <span class="fragment sentence">Findable</span>, <span class="fragment sentence">Accessible</span>, <span class="fragment sentence">Interoperable</span>, and <span class="fragment sentence">Reusable</span> (FAIR)</p>
+				 <img style="border:none; box-shadow:none; background:none" src="./images/fair.png" alt="fair principles" with="500"/>
+				 <aside class="notes">Principles emphasise machine-actionability, eg capacity of computational systems to find, access, interoperate, reuse data with minimal human intervention, but can be taken to encompass human interactions with data/metadata as well, we'll use these to talk in more detail about our new offering</aside>
+				</section>
+
+
+				<section>
+					<h2>Findable</h2>
+					<p>Searches start in search engines, not in portals, so we need to make sure our datasets are search-engine-optimised for both good rankings and well-displayed results</p>
+					<aside class="notes">Metadata and data should be easy to find for both humans and computers. Machine-readable metadata are essential for automatic discovery of datasets and services. Unique persistent ID, rich metadata, searchable and indexable</aside>
+				</section>
+
+				<section>
+					<ul>
+						<li class="fragment bold">We've added structured data into Gemini 2.3,</li>
+						<li class="fragment bold">Created reports showing records with data quality issues,</li>
+						<li class="fragment bold">Improved GeoNetwork SEO</li>
+					</ul>
+					<aside class="notes">data quality reports for abstract too short, title too long and so on</aside>
+				</section>
+
+				<section data-background-image="./images/woodlands_geonetwork.png" data-background-size="contain">
+					<h3 class="box-right">#1 Record in GeoNetwork</h3>
+				</section>
+
+				<section data-background-image="./images/woodlands_structureddata.png" data-background-size="contain">
+					<h3 class="box-right">#2 Structured Data</h3>
+				</section>
+
+				<section data-background-image="./images/woodlandsdataset.png" data-background-size="contain">
+					<h3 class="box-right">#3 Google Search</h3>
+				</section>
+
+				<section>
+					<h3>#4 Social Sharing</h3>
+					<img src="./images/woodlands-twitter.png" alt="twitter card" with="800"/>
+				</section>
+
+				<section>
+					<h3>Data Quality Reports</h3>
+					<img src="./images/dataquality.png" alt="data quality" with="800"/>
+				</section>
+
+
+				<section data-background-image="./images/linkingishare.gif" data-background-size="cover" alt="linking ishare">
+					<p class="box-left">For our iShare customers, we've made it easy to link layers in iShare Maps or GIS to metadata records so you can provide additional context for the data you display online</p>
+<!-- 					<img src="./images/linkingishare.gif" alt="linking ishare" with="800"/> -->
+				</section>
+
+
+				<section>
+					<h2>Accessible</h2>
+					<p>Metadata solutions need to be easy to use, for creators and users, and it should be easy to access the required data</p>
+					<aside class="notes">Once the user finds the required data, she/he needs to know how can they be accessed, possibly including authentication and authorisation. Standard open protocol, authentication where necessary, accessible even if data is not</aside>
+				</section>
+
+				<section>
+					<ul>
+					<li class="fragment bold">We use Metadata Crawler to do the hard work of creating initial metadata records for all of your datasets so you don't have to do it manually,</li>
+					<li class="fragment bold">contribute to accessibility improvements in GeoNetwork,</li>
+					<li class="fragment bold"> and have made the editor in Gemini 2.3 much easier to use</li>
+					</ul>
+					<aside class="notes">Easy to deploy, up and running quickly</aside>
+				</section>
+
+				<section data-background-image="./images/matrix.gif" class="full" data-background-size="cover">
+					<p class="box">(Not metadata crawler, metadata crawler is a boring command-line tool)</p>
+					<small class="attribution" style="color:white">gfycat.com</small>
+				</section>
+
+				<section>
+					<p>Gemini 2.3 editor improvements</p>
+					<img src="./images/betterguidance.gif" alt="better guidance" />
+				</section>
+
+
+				<section>
+					<p>In iShare GIS, you can search for metadata directly in the application, helping you identify and display the data you need, quickly and easily</p>
+				</section>
+
+				<section>
+					<h3>Metadata in iShare GIS</h3>
+					<img src="./images/isharegis.gif" alt="isharegis" width="800"/>
+				</section>
+
+				<section>
+					<h2>Interoperable</h2>
+					<p>Metadata and data need to be in a format that other people or machines can consume</p>
+					<aside class="notes">The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. Shared accessible language, FAIR vocabularies, qualified references</aside>
+				</section>
+
+
+				<section>
+					<ul>
+						<li class="fragment bold">We've implemented support for non-spatial metadata,</li>
+						<li class="fragment bold">support for feature catalogs (ISO19110),</li>
+						<li class="fragment bold">and have a tool for converting online vocabularies into a format GeoNetwork can use for keywords</li>
+				</section>
+
+				<section data-background-color="white" data-background-image="./images/nonspatial.png" data-background-size="contain" alt="non-spatial">
+					<p class="box-left">Non-Spatial Metadata</p>
+				</section>
+
+				<section data-background-color="white" data-background-image="./images/featurecatalog.png" data-background-size="contain" alt="feature catalogs">
+					<p class="box-right">Feature Catalog</p>
+				</section>
+
+				<section>
+					<p>In iShare, records can have a direct reference back to the Spatial Data Warehouse, and the iShare View and Download Service URLs, linking everything together in a way that's easy to maintain</p>
+				</section>
+
+				<section data-background-color="white" data-background-image="./images/isharelinks.png" data-background-size="contain" alt="links back to ishare">
+					<p class="box-left">Links back to iShare</p>
+				</section>
+
+				<section>
+					<h2>Reusable</h2>
+					<p>Data should be in formats that can be shared, with quality metadata to ensure it is signed off for publication, used correctly, and is fit for purpose</p>
+					<aside class="notes">The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings. Accurate, relevant attributes, clear license, detailed provenance, standards</aside>
+				</section>
+
+				<section>
+					<ul>
+						<li class="fragment bold">We can check that links to View and Download services are working correctly,</li>
+						<li class="fragment bold">can send automated reminders when datasets are due or overdue an update</li>
+						<li class="fragment bold">and are working on snippets to allow you to indicate data is fit for release</li>
+					</ul>
+				</section>
+
+				<section data-background-color="white" data-background-image="./images/badlinks.png" data-background-size="contain" alt="bad links in metadata">
+					<p class="box-left">Link Checker</p>
+				</section>
+
+				<section>
+					<p>Overdue Reminders</p>
+					<img src="./images/overdue.png" alt="overdue reminder"/>
+				</section>
+
+				<section>
+					<p>For our all users, including iShare, we can provide separate public and private catalog endpoints, giving a clear separation between metadata they wish to make publicly available, and that which should be accessible only within their organisation.</p>
+				</section>
+
+				<section data-background-image="./images/public_or_private.png" class="full" data-background-size="contain" alt="public or private">
+					<h3>Public and Private endpoints</h3>
+				</section>
+
+				<section>
+					<p>All of this can be deployed quickly and easily on our resilient cloud infrastructure, <span class="fragment sentence">whether you're an iShare customer or not</span>, and <span class="fragment sentence">whether you have existing metadata or not!</span></p>
+				</section>
+
+				<section>
+					<h3>Those FAIR Principles Again</h3>
+					<ul>
+						<li class="fragment bold">make it FINDABLE with structured data and GeoNetwork improvements,</li>
+						<li class="fragment bold">make it ACCESSIBLE with Metadata Crawler and Gemini 2.3 editor enhancements,</li>
+						<li class="fragment bold">make it INTEROPERABLE with non-spatial and feature catalogs,</li>
+						<li class="fragment bold">make it REUSABLE by ensuring links to data are correct and sending update reminders</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Thank You!</h2>
+					<h3 class="fragment">Any questions?</h3>
+					<p class="fragment">Contact <span style="font-weight:bold;color:#eee8d5">sales@astuntechnology.com</span> for more details</p>
+					<aside class="notes">Speak to sales to find out more about anything we've covered today</aside>
+				</section>
+
+				
+				
+			</div>
+
+		<div class="fe-persistent-header">
+ 			<a href="https://astuntechnology.github.io/discoveringmetadatawithastuntechnology/#/">
+ 				<img src=".\images\AstunSmallLogo.png"/>
+ 			</a>
+			<p style="color:white">Discovering Metadata with Astun Technology</p>
+		</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				slideNumber: "c/t",
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+			Reveal.configure({ pdfMaxPagesPerSlide: 1 })
+			Reveal.configure({ pdfSeparateFragments: false });
+
+		</script>
+
+	</body>
+</html>
