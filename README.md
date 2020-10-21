@@ -1,3 +1,3 @@
 # Discovering Metadata with Astun Technology- an Astun Technology Webinar, October 2019
 
-See [astuntechnology.github.io/discoveringmetadatawithastuntechnology](https://astuntechnology.github.io/discoveringmetadatawithastuntechnology/) for the live version of these slides, and downloadable pdf [here](https://github.com/AstunTechnology/discoveringmetadatawithastuntechnology/blob/main/Discovering%20Metadata%20with%20Astun%20Technology.pdf) (recording to follow)
+See [astuntechnology.github.io/discoveringmetadatawithastuntechnology](https://astuntechnology.github.io/discoveringmetadatawithastuntechnology/) for the live version of these slides, and downloadable pdf [here](https://github.com/AstunTechnology/discoveringmetadatawithastuntechnology/blob/main/Discovering%20Metadata%20with%20Astun%20Technology.pdf). See [youtube](https://youtu.be/D-WoSs3M7UQ) for the recording
